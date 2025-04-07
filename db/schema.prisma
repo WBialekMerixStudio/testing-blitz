@@ -21,8 +21,9 @@ model User {
   hashedPassword String?
   role           String   @default("USER")
 
-  tokens   Token[]
-  sessions Session[]
+  tokens         Token[]
+  sessions       Session[]
+  FamilyCalendar FamilyCalendar[]
 }
 
 model Session {
@@ -63,3 +64,23 @@ model Token {
 // enum TokenType {
 //   RESET_PASSWORD
 // }
+
+model Calendar {
+  id                Int      @id @default(autoincrement())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  familyCalendar_id String
+  user_uuid         String
+  name              String
+  isPrivate         Boolean
+  color             String
+}
+
+model FamilyCalendar {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  name       String
+  superAdmin User     @relation(fields: [userId], references: [id])
+  userId     Int
+}

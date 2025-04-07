@@ -40,7 +40,9 @@ export function Form<S extends z.ZodType<any, any>>({
     <FormProvider {...ctx}>
       <form
         onSubmit={ctx.handleSubmit(async (values) => {
+          console.log("witam")
           const result = (await onSubmit(values)) || {}
+          console.log("witam", result)
           for (const [key, value] of Object.entries(result)) {
             if (key === FORM_ERROR) {
               setFormError(value)
