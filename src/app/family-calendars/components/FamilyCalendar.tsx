@@ -18,7 +18,7 @@ export const FamilyCalendar = ({ familyCalendarId }: { familyCalendarId: number 
         <h1>Project {familyCalendar.id}</h1>
         <pre>{JSON.stringify(familyCalendar, null, 2)}</pre>
 
-        <Link href={`/familyCalendars/${familyCalendar.id}/edit`}>Edit</Link>
+        <Link href={`/family-calendars/${familyCalendar.id}/edit`}>Edit</Link>
 
         <button
           type="button"

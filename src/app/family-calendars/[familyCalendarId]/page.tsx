@@ -22,8 +22,6 @@ type FamilyCalendarPageProps = {
 export default async function Page(props: FamilyCalendarPageProps) {
   const params = await props.params
 
-  const
-
   return (
     <div>
       <p>
