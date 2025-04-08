@@ -1,3 +1,4 @@
+"use client";
 
 import { useMutation, useQuery } from "@blitzjs/rpc";
 import Link from "next/link";
