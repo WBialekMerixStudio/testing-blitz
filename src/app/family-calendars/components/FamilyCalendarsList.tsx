@@ -36,7 +36,7 @@ export const FamilyCalendarsList = () => {
       <ul>
         {familyCalendars.map((familyCalendar) => (
           <li key={familyCalendar.id}>
-            <Link href={`/familyCalendars/${familyCalendar.id}`}>
+            <Link href={`/family-calendars/${familyCalendar.id}`}>
               {familyCalendar.name}
             </Link>
           </li>
